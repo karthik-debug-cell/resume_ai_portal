@@ -1,0 +1,101 @@
+/* ---------- Design tokens: Bootstrap 5 variables, re-skinned ---------- */
+:root {
+  --ra-pine: #0e2a26;
+  --ra-pine-2: #153a35;
+  --ra-teal: #0f766e;
+  --ra-mint: #7ee0c9;
+  --ra-bg: #f3f6f5;
+
+  --bs-font-sans-serif: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-bg: var(--ra-bg);
+  --bs-body-color: #1c2b29;
+  --bs-secondary-color: #5d6f6c;
+  --bs-primary: #0f766e;
+  --bs-primary-rgb: 15, 118, 110;
+  --bs-link-color: #0f766e;
+  --bs-link-color-rgb: 15, 118, 110;
+  --bs-link-hover-color: #0b5d57;
+  --bs-border-color: #dde6e3;
+  --bs-border-radius: 0.6rem;
+  --bs-primary-text-emphasis: #0b5d57;
+  --bs-primary-bg-subtle: #d5efea;
+  --bs-primary-border-subtle: #a9ddd4;
+}
+
+.btn-primary {
+  --bs-btn-bg: #0f766e; --bs-btn-border-color: #0f766e;
+  --bs-btn-hover-bg: #0b5d57; --bs-btn-hover-border-color: #0b5d57;
+  --bs-btn-active-bg: #094c47; --bs-btn-active-border-color: #094c47;
+  --bs-btn-disabled-bg: #0f766e; --bs-btn-disabled-border-color: #0f766e;
+  --bs-btn-focus-shadow-rgb: 15, 118, 110;
+}
+.btn-outline-primary {
+  --bs-btn-color: #0f766e; --bs-btn-border-color: #0f766e;
+  --bs-btn-hover-bg: #0f766e; --bs-btn-hover-border-color: #0f766e;
+  --bs-btn-active-bg: #0b5d57; --bs-btn-active-border-color: #0b5d57;
+}
+.bg-primary { background-color: #0f766e !important; }
+.text-primary { color: #0f766e !important; }
+.progress-bar.bg-primary { background-color: #0f766e !important; }
+.form-control:focus, .form-select:focus { border-color: #5bb3a9; box-shadow: 0 0 0 .2rem rgba(15, 118, 110, .18); }
+body { -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5, h6 { letter-spacing: -0.01em; font-weight: 700; }
+.min-w-0 { min-width: 0; }
+.text-accent { color: var(--ra-mint); }
+
+/* ---------- Cards ---------- */
+.ra-card { border: 1px solid var(--bs-border-color); border-radius: .85rem; box-shadow: none; background: #fff; }
+.ra-card.card .card-header, .ra-card .card-footer { border-color: var(--bs-border-color); }
+.ra-stat-icon { width: 48px; height: 48px; border-radius: .8rem; display: grid; place-items: center; font-size: 1.3rem; flex-shrink: 0; }
+
+/* ---------- Logo ---------- */
+.ra-logo-mark { width: 32px; height: 32px; border-radius: .6rem; background: var(--ra-teal); color: #fff; display: grid; place-items: center; font-size: 1rem; }
+
+/* ---------- Public site ---------- */
+.ra-public-nav { background: var(--ra-pine); }
+.ra-hero { background: linear-gradient(160deg, var(--ra-pine) 0%, var(--ra-pine-2) 100%); }
+.ra-hero-stat { background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .12); }
+.ra-job-card { transition: border-color .15s, box-shadow .15s; }
+.ra-job-card.is-clickable { cursor: pointer; }
+.ra-job-card.is-clickable:hover { border-color: #8cc9c0; }
+.ra-job-card.is-active { border-color: var(--ra-teal); box-shadow: 0 0 0 2px rgba(15, 118, 110, .18); }
+.ra-job-card:focus-visible { outline: 3px solid rgba(15, 118, 110, .4); outline-offset: 2px; }
+
+.ra-dropzone { border: 2px dashed #a9ddd4; background: #f8fcfb; cursor: pointer; transition: background .15s, border-color .15s; }
+.ra-dropzone:hover, .ra-dropzone.is-over { background: #eaf7f4; border-color: var(--ra-teal); }
+.ra-dropzone.has-file { border-style: solid; border-color: #a6d9b8; background: #f3fbf5; }
+.ra-dropzone:focus-visible { outline: 3px solid rgba(15, 118, 110, .4); outline-offset: 2px; }
+
+/* ---------- Auth ---------- */
+.ra-auth { background: linear-gradient(160deg, #e6f2ef 0%, var(--ra-bg) 60%); }
+
+/* ---------- Admin shell ---------- */
+.ra-shell { min-height: 100vh; }
+.ra-sidebar {
+  position: fixed; inset: 0 auto 0 0; width: 250px; background: var(--ra-pine); color: #fff; z-index: 1040;
+  transform: translateX(-100%); transition: transform .2s ease;
+}
+.ra-sidebar.is-open { transform: none; }
+.ra-scrim { position: fixed; inset: 0; background: rgba(0, 0, 0, .45); z-index: 1035; }
+.ra-main { margin-left: 0; }
+@media (min-width: 992px) {
+  .ra-sidebar { transform: none; }
+  .ra-main { margin-left: 250px; }
+}
+.ra-side-link { color: #b9cdc9; padding: .65rem .9rem; border-radius: .6rem; font-weight: 600; }
+.ra-side-link:hover { color: #fff; background: rgba(255, 255, 255, .06); }
+.ra-side-link.active { color: #fff; background: rgba(126, 224, 201, .14); box-shadow: inset 3px 0 0 var(--ra-mint); }
+.ra-side-link i { font-size: 1.05rem; }
+.ra-topbar { position: sticky; top: 0; z-index: 1020; min-height: 64px; }
+.ra-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--ra-teal); color: #fff; display: grid; place-items: center; font-size: .75rem; font-weight: 700; }
+
+/* ---------- Tables / forms ---------- */
+.ra-table thead th { font-size: .8rem; font-weight: 700; color: var(--bs-secondary-color); background: #f8fbfa; border-bottom: 1px solid var(--bs-border-color); white-space: nowrap; }
+.ra-table td { padding-top: .8rem; padding-bottom: .8rem; }
+.ra-status-select { font-size: .82rem; }
+.ra-resume-text { white-space: pre-wrap; word-break: break-word; font-family: inherit; font-size: .88rem; background: #f8fbfa; border: 1px solid var(--bs-border-color); border-radius: .6rem; padding: 1rem; max-height: 480px; overflow: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ra-sidebar, .ra-ring circle, .ra-job-card, .ra-dropzone { transition: none !important; }
+}
